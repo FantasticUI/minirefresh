@@ -28,7 +28,7 @@ const RELEASE_DEBUG_PATH = 'dist/debug';
 const RELEASE_PUBLIC_PATH = 'dist';
 const SOURCE_ROOT_PATH = 'src';
 const isSourceMap = false;
-
+// 路径
 function resolvePath(p) {
     return path.resolve(__dirname, '../', p);
 }
@@ -166,7 +166,7 @@ gulp.task('clean_css', () => gulp.src([
     }))
     .pipe(gulp.dest(resolvePath(`${RELEASE_PUBLIC_PATH}/`))));
 
-    
+     
 gulp.task('pack_resources_release', () => gulp.src([
     resolvePath(`${RELEASE_DEBUG_PATH}/**/*`),
     '!PATH'.replace('PATH', resolvePath(`${RELEASE_DEBUG_PATH}/**/*.css`)),
